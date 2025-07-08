@@ -4,12 +4,15 @@
     "slug": "pokopartyth",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/logo/pokoparty_logo.png",
     "scheme": "pokopartyth",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
+    },
+    "extra": {
+      "API_BASE_URL": "http://172.20.10.11"
     },
     "android": {
       "adaptiveIcon": {

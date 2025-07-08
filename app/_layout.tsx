@@ -10,6 +10,8 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    'kanit-bold': require('../assets/fonts/Kanit-Bold.ttf'),
+    'kanit-regular': require('../assets/fonts/Kanit-Regular.ttf'),
   });
 
   if (!loaded) {
@@ -20,7 +22,13 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="login" options={{ headerShown: false }} />
+        <Stack.Screen name="register" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="joinroom" options={{ headerShown: false }} />
+        <Stack.Screen name="roomraid" options={{ headerShown: false }} />
+        <Stack.Screen name="chatroom" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
